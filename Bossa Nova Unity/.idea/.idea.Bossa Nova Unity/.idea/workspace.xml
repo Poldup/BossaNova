@@ -7,6 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -25,6 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -57,7 +66,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649159455374</updated>
-      <workItem from="1649159512480" duration="4171000" />
+      <workItem from="1649159512480" duration="4570000" />
+      <workItem from="1649493757101" duration="2447000" />
+      <workItem from="1649496253334" duration="2835000" />
+      <workItem from="1649504201883" duration="15569000" />
+      <workItem from="1649579669612" duration="15185000" />
+      <workItem from="1649665582468" duration="37765000" />
+      <workItem from="1649778978876" duration="16513000" />
+      <workItem from="1649856118764" duration="2585000" />
     </task>
     <servers />
   </component>

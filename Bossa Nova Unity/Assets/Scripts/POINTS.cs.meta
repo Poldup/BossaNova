@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 37edb394df00be9429ed80bdf4c630f8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - miniJeu: {instanceID: 0}
+  - ligneConnectionBase: {fileID: 1272419903245045042, guid: b79306c495c4f2d46b8a981e393527a7,
+      type: 3}
+  - prochainPoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
