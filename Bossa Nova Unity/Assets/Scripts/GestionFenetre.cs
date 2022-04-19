@@ -12,11 +12,13 @@ public class GestionFenetre : MonoBehaviour, IPointerDownHandler
 {
     public WichSchema modele;
     
-    public GameObject fenetre;
+    public GameObject fenetreObject;
     public Animator fenetreAnim;
     private bool isOpen;
     private float transitionTime = 1.8f;
     public GameObject commencer;
+
+    public Coroutine lancement;
     
     // Start is called before the first frame update
     void Start()
@@ -33,15 +35,15 @@ public class GestionFenetre : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         
-        if (fenetre.activeInHierarchy)
+        if (fenetreObject.activeInHierarchy)
         {
-            StartCoroutine(Desactivation());
+           // StartCoroutine(Desactivation());
 
         }
 
-        if (fenetre.activeInHierarchy == false)
+        if (fenetreObject.activeInHierarchy == false)
         {
-            fenetre.SetActive(true);
+            fenetreObject.SetActive(true);
             Debug.Log("ouverture");
             fenetreAnim.SetTrigger("Open");
             StartCoroutine(Activation());
@@ -51,24 +53,17 @@ public class GestionFenetre : MonoBehaviour, IPointerDownHandler
         
         
     }
-
-    IEnumerator Desactivation()
-            {
-                Debug.Log("fermeture");
-                fenetreAnim.SetTrigger("Close");
-                modele.schemaFinal.gameObject.SetActive(false);
-                yield return new WaitForSeconds(transitionTime);
-                fenetre.SetActive(false);
-                
-            }
+    
 
     IEnumerator Activation()
     {
+        
        //fenetre.SetActive(true);
         Debug.Log("ouverture");
         //fenetreAnim.SetTrigger("Open");
         yield return new WaitForSeconds(transitionTime);
-        modele.ActivationRandom();
+       // modele.ActivationRandom();
+       modele.LancementJeu();
 
     }
     

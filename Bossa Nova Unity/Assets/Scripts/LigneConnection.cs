@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +15,10 @@ public class LigneConnection : MonoBehaviour
 
     private POINTS prochainPoint;
     private bool nepasSuivre;
+    private bool plusieursLignes;
 
+    private int nbrLignes = 0;
+    
     public UnityEvent quandRelie = new UnityEvent();
 
     public Schema schema;
@@ -37,10 +41,11 @@ public class LigneConnection : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         SuivreSouris();
         AnnulerLigne();
         VerifierProchainPoint();
+       UneSeuleLigne();
     }
 
     private void VerifierProchainPoint()
@@ -48,13 +53,16 @@ public class LigneConnection : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && !nepasSuivre)
         {
            // print("Appuie sur le bouton");
-            Collider2D pointSuivant = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition),0.01f);
-            //print(pointSuivant);
+            Collider2D pointSuivant = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition),0.05f);
+           nbrLignes = nbrLignes + 1;
+           print(nbrLignes);
             if (pointSuivant && pointSuivant.TryGetComponent(out POINTS cercle ) && cercle == prochainPoint)
             {
-                print("Normalement le point est relie");
+                // print("Normalement le point est relie");
                 RelierPoints();
+
             }
+
         }
     }
 
@@ -62,11 +70,11 @@ public class LigneConnection : MonoBehaviour
     {
         connexion.SetPosition(1,prochainPoint.transform.position);
         nepasSuivre = true;
-        enTrainDeFaireUneLigne = false;
+        enTrainDeFaireUneLigne = true;
         quandRelie.Invoke();
-        
+
     }
-    private void SuivreSouris()
+    public void SuivreSouris()
     {
         if (nepasSuivre) return;
         connexion.SetPosition(1, (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -75,7 +83,7 @@ public class LigneConnection : MonoBehaviour
     public void PositionPoints(POINTS premierPoint, POINTS _prochainPoint)
     {
         connexion.SetPosition(0,(Vector2) premierPoint.transform.position);
-        nepasSuivre = false;
+        nepasSuivre = false ;
         prochainPoint = _prochainPoint;
         enTrainDeFaireUneLigne = true;
     }
@@ -89,6 +97,19 @@ public class LigneConnection : MonoBehaviour
         }
         
     }
-    
-    
+
+    public void UneSeuleLigne()
+    {
+        if (nbrLignes > 2)
+        {
+           // nepasSuivre = false;
+           // enTrainDeFaireUneLigne = false;
+           Destroy(gameObject);
+            
+
+        }
+        
+        
+    }
+   
 }

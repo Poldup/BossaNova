@@ -35,29 +35,26 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
         public void OnPointerDown(PointerEventData eventData)
         {
             
-            if (!LigneConnection.enTrainDeFaireUneLigne && !estRelie && Instantiate(ligneConnectionBase.gameObject,transform).TryGetComponent(out LigneConnection nouvelleConnection))
+            if (!estRelie && Instantiate(ligneConnectionBase.gameObject,transform).TryGetComponent(out LigneConnection nouvelleConnection))
             {
-                Debug.Log("bouton active");
+                //Debug.Log("bouton active");
                 nouvelleConnection.PositionPoints(this, prochainPoint);
                 nouvelleConnection.quandRelie.AddListener((() =>
                 {
                     estRelie = true;
                 }));
                 
-            
-               
+
             }
             
             
             
         }
-        
 
-      
-        
+
         
 }
 
       
-        
+//!LigneConnection.enTrainDeFaireUneLigne && 
 
