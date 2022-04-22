@@ -11,7 +11,7 @@ public class WichSchema : MonoBehaviour
     [SerializeField]
     public List<Schema> allschemas = new List<Schema>() ;
     
-[SerializeField]
+    [SerializeField]
     private Schema[] schemaschoisis = new Schema[3];
 
     [SerializeField] 
