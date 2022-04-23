@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SystemeJourSuivant : MonoBehaviour
+{
+
+    [SerializeField] public bool prochainJour = false;
+    [SerializeField] public int quelJour;
+    
+    
+    
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        quelJour = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    
+
+    public void UnjourdePlus()
+    {
+        quelJour += 1;
+        Debug.Log(quelJour);
+        prochainJour = true;
+        Debug.Log(prochainJour);
+    }
+}

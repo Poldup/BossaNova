@@ -16,9 +16,9 @@ public class GestionFenetre : MonoBehaviour, IPointerDownHandler
     public Animator fenetreAnim;
     private bool isOpen;
     private float transitionTime = 1.8f;
-    public GameObject commencer;
 
     public Coroutine lancement;
+    
     
     // Start is called before the first frame update
     void Start()

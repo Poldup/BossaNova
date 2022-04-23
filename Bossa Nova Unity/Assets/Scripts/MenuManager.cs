@@ -14,6 +14,8 @@ public class MenuManager : MonoBehaviour
 
     private Animator animationMenu;
 
+    public SystemeJourSuivant systemeJour;
+
     private float transitionTime  = 1f;
     
     // Start is called before the first frame update
@@ -58,4 +60,19 @@ public class MenuManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         animationMenu.SetTrigger("AnimationStart");
     }
+
+
+    public void JourSuivant()
+    {
+        
+        StartCoroutine(ChangementJour());
+        
+    }
+
+    IEnumerator ChangementJour()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        animationMenu.SetTrigger("AnimationStart");
+    }
+    
 }

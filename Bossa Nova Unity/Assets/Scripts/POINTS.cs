@@ -55,6 +55,4 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
         
 }
 
-      
-//!LigneConnection.enTrainDeFaireUneLigne && 
 
