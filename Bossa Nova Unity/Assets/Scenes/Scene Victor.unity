@@ -3592,7 +3592,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &468657148
 PrefabInstance:
@@ -10664,58 +10664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37edb394df00be9429ed80bdf4c630f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1229029885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1229029887}
-  - component: {fileID: 1229029886}
-  m_Layer: 0
-  m_Name: Dialogues
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1229029886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229029885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3b4d605d13489342a926db44cd8f29b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toutLesDialogues:
-  - {fileID: 11400000, guid: 42fb41b6e4cc8f640bd61aa4c2a7c297, type: 2}
-  - {fileID: 11400000, guid: 1ecd371850ba8ee4c856dde725956f74, type: 2}
-  - {fileID: 11400000, guid: 2ecb4b9349971af47b498f3c520ec640, type: 2}
-  copieToutLesDialogues: []
-  dialogueSelectionne: {fileID: 0}
-  numeroDialogue: 0
-  joursuivant: {fileID: 1283937290}
---- !u!4 &1229029887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229029885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 762.9641, y: 182.7166, z: -10.946752}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234564497
 GameObject:
   m_ObjectHideFlags: 0
@@ -11538,7 +11486,6 @@ GameObject:
   - component: {fileID: 1283937293}
   - component: {fileID: 1283937292}
   - component: {fileID: 1283937291}
-  - component: {fileID: 1283937290}
   m_Layer: 5
   m_Name: Bouton Jour Suivant
   m_TagString: Untagged
@@ -11546,21 +11493,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1283937290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283937289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12f2d006a467b147819a84662c31c16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prochainJour: 0
-  quelJour: 0
-  jourSuivant: {fileID: 1283937291}
 --- !u!114 &1283937291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11605,31 +11537,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1229029886}
-        m_TargetAssemblyTypeName: ListesDialogues, Assembly-CSharp
-        m_MethodName: DialogueSuivant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1545905052}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ProchainDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1283937290}
+      - m_Target: {fileID: 1647390347}
         m_TargetAssemblyTypeName: SystemeJourSuivant, Assembly-CSharp
         m_MethodName: UnjourdePlus
         m_Mode: 1
@@ -11641,10 +11549,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1647390346}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: JourSuivant
+      - m_Target: {fileID: 1545905052}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: AffichageDialogue
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1283937289}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13338,6 +13258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545905053}
   - component: {fileID: 1545905052}
+  - component: {fileID: 1545905054}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -13357,13 +13278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1e581d9d5c2bb48b3b4e6837253cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomDialogue: {fileID: 0}
   texteDialogue: {fileID: 1489781186}
-  phrasesDuDialogue: {fileID: 11400000, guid: 42fb41b6e4cc8f640bd61aa4c2a7c297, type: 2}
-  listeDialogues: {fileID: 1229029886}
+  dialogueActuel: {fileID: 0}
+  listeDialogues: {fileID: 1545905054}
   tempsEcriture: 0.05
   boiteDialogue: {fileID: 1489781184}
-  jourSuivant: {fileID: 1283937290}
+  jourSuivant: {fileID: 1647390347}
 --- !u!4 &1545905053
 Transform:
   m_ObjectHideFlags: 0
@@ -13379,6 +13299,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545905054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545905051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4d605d13489342a926db44cd8f29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toutLesDialogues:
+  - {fileID: 11400000, guid: 42fb41b6e4cc8f640bd61aa4c2a7c297, type: 2}
+  - {fileID: 11400000, guid: 1ecd371850ba8ee4c856dde725956f74, type: 2}
+  - {fileID: 11400000, guid: 2ecb4b9349971af47b498f3c520ec640, type: 2}
+  copieToutLesDialogues: []
+  dialogueSelectionne: {fileID: 0}
+  joursuivant: {fileID: 1647390347}
 --- !u!1001 &1559801846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14030,6 +13969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647390345}
   - component: {fileID: 1647390346}
+  - component: {fileID: 1647390347}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -14066,7 +14006,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changementLevel: {fileID: 4592747504151526431, guid: 87efddbdd67cdae4bb32aa5392deb531,
     type: 3}
-  systemeJour: {fileID: 1283937290}
+  systemeJour: {fileID: 1647390347}
+--- !u!114 &1647390347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647390343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12f2d006a467b147819a84662c31c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prochainJour: 0
+  quelJour: 0
 --- !u!4 &1653252688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3704276207006306185, guid: 60fa39a8c3de05841b41d21484bb55f0,
