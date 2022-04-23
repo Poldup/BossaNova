@@ -6,12 +6,16 @@ using Unity.Mathematics;
 public class MiniJeuStart : MonoBehaviour
 {
     public GameObject dustPrefab;
+    public GameObject Dusts;
     public int dustNumber;
     public Collider2D border;
-    private Vector2 dustPos;
+    public Collider2D pelle;
     private int yNb;
     private int xNb;
     private int xNb2 = 0;
+    private float divX;
+    private float divY;
+    private float divX2; 
     
 
 
@@ -19,39 +23,65 @@ public class MiniJeuStart : MonoBehaviour
     void Start()
     {
         yNb = (int) Mathf.Sqrt(dustNumber);
+        Debug.Log("sqrt"+Mathf.Sqrt(6));
         xNb = dustNumber / yNb;
         if (dustNumber % yNb != 0)
         {
             xNb2 = xNb + 1;
         }
-        
+        divX = border.bounds.size.x / xNb;
+        divY = border.bounds.size.y / yNb;
+        divX2 = border.bounds.size.x / xNb2;
+        Debug.Log("divY"+divY);
+        for (int i=1; i<=dustNumber; i++)
+        {
+            Vector4 section = coord(xNb, yNb, xNb2, border, i);
+            float dustX = UnityEngine.Random.Range(section.w, section.y);
+            float dustY = UnityEngine.Random.Range(section.x, section.z);
+            Vector3 dustPos = new Vector3(dustX, dustY, 0);
+            Debug.Log("dust pos =" + dustPos);
+            if (!wellplaced(dustPos, pelle, border))
+            {
+                GameObject dust = Instantiate(dustPrefab, dustPos, dustPrefab.transform.rotation, Dusts.transform);
+                Debug.Log("dust placé");
+            }
+        }
 
-        Debug.Log(border.bounds);
+        
         
     }
 
-    static bool wellplaced (Vector2 point, Collider2D pelle, Collider2D border)
+    static bool wellplaced(Vector3 point, Collider2D pelle, Collider2D border)
     {
-        Vector2 center;
-        Vector2 direction;
-        Ray2D ray;
-        RaycastHit z;
+        Vector3 center;
+        Vector3 centerPelle;
+        Vector3 direction;
+        Vector3 directionPelle;
         bool hit;
+        bool hit2;
+        RaycastHit2D hitBorder;
+        RaycastHit2D hitPelle;
         center = border.bounds.center;
+        centerPelle = pelle.bounds.center;
         direction = center - point;
-        ray = new Ray2D(point, direction);
-        hit = border.Raycast(point, out z, direction.magnitude);
-        return !hit;
+        directionPelle = centerPelle - point;
+        hitBorder = Physics2D.Raycast(point, direction, direction.magnitude);
+        hitPelle = Physics2D.Raycast(point, directionPelle, directionPelle.magnitude);
+        hit = hitBorder.collider;
+        hit2 = hitPelle.collider;
+        
+        return hit || hit2;
+
     }
+
     Vector4 coord(int xNb, int yNb, int xNb2, Collider2D zone, int number)
     {
-        float divX = zone.bounds.size.x / xNb;
-        float divY = zone.bounds.size.y / yNb;
-        float divX2 = zone.bounds.size.x / xNb2;
-        int yA = (int)Mathf.Ceil((number / xNb) - 2);
+        Debug.Log("(int)Mathf.Ceil((" + number + '/' + xNb + ")-1");
+        int yA = (int)Mathf.Ceil(((float)number / (float) xNb)) - 1;
         int yB = yA + 1;
-        int xA = (number - ((yA - 1) * xNb)) - 1;
+        int xA = (number - ((yA) * xNb)) - 1;
         int xB = xA + 1;
+        Debug.Log("yA" + yA + "yB" + yB + "xA" + xA + "xB" + xB);
         float orX = zone.bounds.min.x;
         float orY = zone.bounds.min.y;
         Vector4 coord = new Vector4();

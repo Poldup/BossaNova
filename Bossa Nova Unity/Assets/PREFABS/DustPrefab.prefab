@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3507548258072791494}
   - component: {fileID: 1727348729105718105}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1751926514251912355}
   - component: {fileID: 4832842107262865509}
   - component: {fileID: -5209544948611423912}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DustPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
