@@ -4,18 +4,42 @@ using UnityEngine;
 
 public class DustMovement : MonoBehaviour
 {
-    private Vector2 movement;
+    public Vector2 movement;
+    public Vector2 surroundDustMovement;
+    public Vector2 actualMovement;
     // Update is called once per frame
     void FixedUpdate()
     {
-        movement = DeplacementSouris.instance.movement;
+        if (movement!=null)
+        {
+            actualMovement = movement;
+        }
+        else if (surroundDustMovement!=null)
+        {
+            actualMovement = surroundDustMovement;
+        }
+        else
+        {
+            actualMovement = new Vector2(0, 0);
+        }
+        transform.Translate(actualMovement);
+        movement = actualMovement = new Vector2(0,0);
+
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="balai")
+        if (collision.gameObject.tag=="poussiere2")
         {
-            transform.Translate(movement);
+            if (movement != null)
+            {
+                collision.gameObject.GetComponent<DustMovement>().surroundDustMovement=movement;
+            }
+            else if (surroundDustMovement != null)
+            {
+                collision.gameObject.GetComponent<DustMovement>().surroundDustMovement=surroundDustMovement;
+            }
+            
         }
     }
 }
