@@ -31,7 +31,8 @@ public class WichSchema : MonoBehaviour
 
     [SerializeField] private DialogueManager dialogue;
     [SerializeField] private GameManager manager;
-
+    public AudioSource music;
+    public AudioSource musicAutre;
     
     
     
@@ -122,6 +123,8 @@ public class WichSchema : MonoBehaviour
            
           //Debug.Log("message presenttion");
            schemaPrésentation.gameObject.SetActive(true);
+            musicAutre.Stop();
+            music.Play();
            yield return new WaitForSeconds(2);
            schemaPrésentation.gameObject.SetActive(false);
            schemaFinal.tableauFini = false;

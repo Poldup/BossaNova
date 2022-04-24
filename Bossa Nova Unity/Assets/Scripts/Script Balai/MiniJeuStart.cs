@@ -18,6 +18,8 @@ public class MiniJeuStart : MonoBehaviour
     private float divY;
     private float divX2;
     private static int layerMask;
+    public AudioSource music;
+    public AudioSource musicAutre;
 
 
     private void Awake()
@@ -39,6 +41,9 @@ public class MiniJeuStart : MonoBehaviour
     {
         Debug.Log("test");
         instructions.SetActive(true);
+        musicAutre.Stop();
+        music.Play();
+
         yield return new WaitForSeconds(2);
         instructions.SetActive(false);
 
