@@ -115,7 +115,7 @@ public class WichSchema : MonoBehaviour
 
    }
    
-  IEnumerator SchemaLancement()
+  public IEnumerator SchemaLancement()
    {
        if (premierJeuLance)
        {
@@ -134,7 +134,7 @@ public class WichSchema : MonoBehaviour
    }
 
 
-   IEnumerator FinJeu()
+   public IEnumerator FinJeu()
    {
        Debug.Log("fin jeu");
        schemaFinal.gameObject.SetActive(true);

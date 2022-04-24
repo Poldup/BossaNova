@@ -11,6 +11,8 @@ public class DustCounter : MonoBehaviour
     [SerializeField] private GameManager manager;
     [HideInInspector]
     public bool started=false;
+    
+    public WichSchema wichSchema;
 
     private void Awake()
     {
@@ -20,10 +22,10 @@ public class DustCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Dusts.Count==0 && started)
+        if (Dusts.Count == 0 && started)
         {
             Debug.Log("finito");
-            modele.GetComponent<WichSchema>().StartCoroutine(FinJeu());
+            wichSchema.FinJeu();
         }
     }
 
