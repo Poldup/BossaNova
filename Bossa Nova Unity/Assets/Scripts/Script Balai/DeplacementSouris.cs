@@ -43,9 +43,5 @@ public class DeplacementSouris : MonoBehaviour
         {
             transform.GetChild(0).transform.Rotate(0, 0, -wheel, Space.Self);
         }
-
-        //movement= new Vector2(Mathf.Clamp(Input.GetAxis("Mouse X"),-1,1)*mouseSpeed, Mathf.Clamp(Input.GetAxis("Mouse Y"),-1,1)*mouseSpeed);
-        //wheel = Input.GetAxis("Mouse ScrollWheel") * rotateSpeed;
-
     }
 }
