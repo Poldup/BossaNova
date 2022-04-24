@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     {
         
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("SceneFinal");
+        SceneManager.LoadScene("LastScene");
     }
 }
 
