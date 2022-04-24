@@ -9,11 +9,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Objets
   - Water
   - UI
-  - 
-  - 
+  - Poussieres
+  - Bordure2
   - 
   - 
   - 
@@ -45,9 +45,12 @@ TagManager:
   - name: Fond
     uniqueID: 29435365
     locked: 0
-  - name: Objets
-    uniqueID: 2597232311
+  - name: Pelle
+    uniqueID: 2825741263
     locked: 0
   - name: "Poussi\xE8re"
     uniqueID: 3070692415
+    locked: 0
+  - name: Balai
+    uniqueID: 2597232311
     locked: 0
