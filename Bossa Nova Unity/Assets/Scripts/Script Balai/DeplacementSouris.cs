@@ -11,8 +11,16 @@ public class DeplacementSouris : MonoBehaviour
     //public ScrollRect scroll;
     //public float mouseWheelSensitivity;
 
-    private Vector2 movement;
+    [HideInInspector]
+    public Vector2 movement;
     private float wheel;
+
+    public static DeplacementSouris instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
