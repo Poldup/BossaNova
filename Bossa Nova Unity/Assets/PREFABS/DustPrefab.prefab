@@ -189,10 +189,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6835704611029880319}
   - component: {fileID: 6215132196757666447}
-  - component: {fileID: 2858074200760850666}
   m_Layer: 3
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: poussiere2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,15 +237,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8426137, y: 0.81197655}
   m_EdgeRadius: 0
---- !u!114 &2858074200760850666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7009864242858278686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3de0b50ff886ea34689777f31a126d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
