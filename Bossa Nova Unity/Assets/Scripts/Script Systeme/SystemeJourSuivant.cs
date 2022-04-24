@@ -17,7 +17,7 @@ public class SystemeJourSuivant : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quelJour = 1;
+        quelJour = 0;
     }
 
     // Update is called once per frame

@@ -6572,7 +6572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &697439002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17539,7 +17539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prochainJour: 0
-  quelJour: 2
+  quelJour: 0
   listes: {fileID: 336428943}
   gameManager: {fileID: 0}
 --- !u!114 &1711492576
@@ -19066,7 +19066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1862963346
 CanvasGroup:
   m_ObjectHideFlags: 0

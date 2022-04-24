@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     private int index;
 
-    private bool changement;
+    //private bool changement;
 
     public float tempsEcriture = 0.05f;
     
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         //AffichageDialogue();
-       // PremierLancement();
+       PremierLancement();
     }
     
     
@@ -41,7 +41,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(tempsEcriture);
         }
 
-        changement = true;
+        //changement = true;
         StartCoroutine(ChangementTexte());
     }
 
@@ -51,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         {
             index++;
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            changement = false;
+            //changement = false;
             Debug.Log(index);
             texteDialogue.text = "";
             dialogueActuel.dialogueFini = true;
