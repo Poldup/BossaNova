@@ -41,6 +41,7 @@ public class MiniJeuStart : MonoBehaviour
         instructions.SetActive(true);
         yield return new WaitForSeconds(2);
         instructions.SetActive(false);
+
         yNb = (int)Mathf.Sqrt(dustNumber);
         xNb = dustNumber / yNb;
         if (dustNumber % yNb != 0)
@@ -68,6 +69,7 @@ public class MiniJeuStart : MonoBehaviour
                 DustCounter.instance.Dusts.Add(dust);
             }
         }
+        DustCounter.instance.started = true;
     }
     static bool wellplaced(Vector3 point, Collider2D pelle, Collider2D border)
     {
