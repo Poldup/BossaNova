@@ -18,6 +18,7 @@ public class MiniJeuStart : MonoBehaviour
     private float divX2;
     private static int layerMask;
 
+
     private void Awake()
     {
         //layerMask = 1<<5;
