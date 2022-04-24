@@ -121,6 +121,7 @@ MonoBehaviour:
     type: 3}
   prochainPoint: {fileID: 0}
   estRelie: 0
+  clic: {fileID: 8300000, guid: bd6cf637bb8dae84f803952823197703, type: 3}
 --- !u!1 &3704276208329650476
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
     
     [SerializeField]
     public bool estRelie;
+
+    [SerializeField] private AudioClip clic;
+    private AudioSource clicSound;
+ 
     
 
     public static bool ecranEstFini;
@@ -40,10 +44,13 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
                 {
                     estRelie = true;
                 }));
+                clicSound.clip = clic;
+                clicSound.Play();
                 nouvelleConnection.SuivreSouris(this);
 
             }
 
+            
             
             
         }
