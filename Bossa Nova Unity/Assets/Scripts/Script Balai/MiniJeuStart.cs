@@ -30,7 +30,7 @@ public class MiniJeuStart : MonoBehaviour
 
     void Start()
     {
-        BalaiStart();
+        StartCoroutine(BalaiStart());
     }
 
     

@@ -35,12 +35,12 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
  
         public void OnPointerDown(PointerEventData eventData)
         {
-            this.clicSound.Play();
+            PenSoundSelector.instance.Pen();
             if (!estRelie && Instantiate(ligneConnectionBase.gameObject,transform).TryGetComponent(out LigneConnection nouvelleConnection))
             {
                 //Debug.Log("bouton active");
                 nouvelleConnection.PositionPoints(this, prochainPoint);
-                this.clicSound.Play();
+                PenSoundSelector.instance.Pen();
                 nouvelleConnection.quandRelie.AddListener((() =>
                 {
                     estRelie = true;
