@@ -9,6 +9,7 @@ public class SystemeJourSuivant : MonoBehaviour
     [SerializeField] public bool prochainJour = false;
     [SerializeField] public int quelJour;
     [SerializeField] public ListesDialogues listes;
+    [SerializeField] public GameManager gameManager;
     
     
     
@@ -33,5 +34,7 @@ public class SystemeJourSuivant : MonoBehaviour
         prochainJour = true;
         Debug.Log(prochainJour);
         listes.numeroDialogue = 0;
+        gameManager.jeuRevisionFini = false;
+        gameManager.jeuBalaisFini = false;
     }
 }

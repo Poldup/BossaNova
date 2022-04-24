@@ -28,6 +28,9 @@ public class WichSchema : MonoBehaviour
     private bool jeuLance;
     private bool premierJeuLance = true;
 
+    [SerializeField] private DialogueManager dialogue;
+    [SerializeField] private GameManager manager;
+
     
     
     
@@ -140,6 +143,8 @@ public class WichSchema : MonoBehaviour
        fenetre.fenetreAnim.SetTrigger("Close");
        yield return new WaitForSeconds(1.8f);
        fenetre.fenetreObject.gameObject.SetActive(false);
+       dialogue.AffichageDialogue();
+       manager.jeuRevisionFini = true;
    }
 }
 

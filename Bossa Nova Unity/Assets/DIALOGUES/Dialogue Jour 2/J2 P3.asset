@@ -10,12 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92fdf83f3e1cbe94bad7db319dc072af, type: 3}
-  m_Name: JOUR 1 P2
+  m_Name: J2 P3
   m_EditorClassIdentifier: 
-  phrase:
-  - "Bon\u2026 Va falloir que je m\u2019y mette\u2026"
-  - "J\u2019ai la flemme de tout."
-  - "J\u2019ai la flemme pour tout."
-  - Mais va falloir que je fasse tout....
-  - Bon ! Si je revivais un peu avant de commencer...
-  dialogueFini: 1
+  phrase: []
+  dialogueFini: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: JOUR 1
   m_EditorClassIdentifier: 
   phrase:
-  - "\u201COn s\u2019appelle bient\xF4t d\u2019accord ? Je t\u2019aime fort ma ch\xE9rie\u201D"
+  - "On s\u2019appelle bient\xF4t d\u2019accord ? Je t\u2019aime fort ma ch\xE9rie"
   dialogueFini: 0

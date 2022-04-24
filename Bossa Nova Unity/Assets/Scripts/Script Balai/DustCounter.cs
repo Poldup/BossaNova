@@ -6,6 +6,7 @@ public class DustCounter : MonoBehaviour
 {
     public List<GameObject> Dusts;
     public static DustCounter instance;
+    [SerializeField] private GameManager manager;
 
     private void Awake()
     {
@@ -18,6 +19,10 @@ public class DustCounter : MonoBehaviour
         if (Dusts.Count==0)
         {
             Debug.Log("finito");
+            manager.jeuBalaisFini = true;
+            
+
+
         }
     }
 

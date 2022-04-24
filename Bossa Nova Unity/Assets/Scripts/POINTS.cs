@@ -13,8 +13,8 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
     [SerializeField]
     public bool estRelie;
 
-    [SerializeField] private AudioClip clic;
-    private AudioSource clicSound;
+    private AudioClip clic;
+    [SerializeField] private AudioSource clicSound;
  
     
 
@@ -35,17 +35,16 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
  
         public void OnPointerDown(PointerEventData eventData)
         {
-            
+            this.clicSound.Play();
             if (!estRelie && Instantiate(ligneConnectionBase.gameObject,transform).TryGetComponent(out LigneConnection nouvelleConnection))
             {
                 //Debug.Log("bouton active");
                 nouvelleConnection.PositionPoints(this, prochainPoint);
+                this.clicSound.Play();
                 nouvelleConnection.quandRelie.AddListener((() =>
                 {
                     estRelie = true;
                 }));
-                clicSound.clip = clic;
-                clicSound.Play();
                 nouvelleConnection.SuivreSouris(this);
 
             }

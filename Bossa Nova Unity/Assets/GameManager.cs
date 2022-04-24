@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator transitionAnimator;
 
     [SerializeField] private DialogueManager gestionDialogue;
+
+    [SerializeField] public bool jeuRevisionFini, jeuBalaisFini;
+
+    [SerializeField] private Button jourSuivant;
+    
 
     private void Start()
     {
@@ -45,6 +52,36 @@ public class GameManager : MonoBehaviour
         gestionDialogue.AffichageDialogue();
 
 
+    }
+
+    public void Update()
+    {
+        if (jeuBalaisFini && jeuRevisionFini)
+        {
+            jourSuivant.gameObject.SetActive(true);
+            gestionDialogue.AffichageDialogue();
+        }
+
+        if (jeuBalaisFini && jeuRevisionFini && systemeJour.quelJour == 3)
+        {
+            Debug.Log("Derneir Ecran");
+            EcranFinal();
+        }
+
+    }
+
+    public void EcranFinal()
+    {
+        StartCoroutine(ChargementSceneFinal());
+        
+
+    }
+    
+    IEnumerator ChargementSceneFinal()
+    {
+        
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene("SceneFinal");
     }
 }
 

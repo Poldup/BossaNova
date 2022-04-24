@@ -59,6 +59,7 @@ public class LigneConnection : MonoBehaviour
            print(nbrLignes);
             if (pointSuivant && pointSuivant.TryGetComponent(out POINTS cercle ) && cercle == prochainPoint)
             {
+                
                 // print("Normalement le point est relie");
                 RelierPoints();
 

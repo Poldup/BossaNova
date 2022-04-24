@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: JOUR 2 P3
   m_EditorClassIdentifier: 
   phrase:
-  - Et si je travaillais un peu maintenant...
+  - "Bon c'\xE9tait plus rapide que pr\xE9vu !"
+  - "Je vais passer un coup de balais parce qu'apr\xE8s tout \xE7a..."
+  - "O\xF9 est mon ramasse poussiere... ?"
   dialogueFini: 0
