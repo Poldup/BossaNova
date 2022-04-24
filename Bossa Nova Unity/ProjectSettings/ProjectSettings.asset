@@ -678,16 +678,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_2D
-  metroPackageVersion: 
-  metroCertificatePath: F:\Nouveau dossier (2)\BossaNova\Bossa Nova Unity\Assets\WSATestCertificate.pfx
+  metroPackageName: Template2D
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
   metroCertificateNotAfter: 004500575371d901
   metroApplicationDescription: Template_2D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Bossa Nova
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
