@@ -25,7 +25,7 @@ public class DustCounter : MonoBehaviour
         if (Dusts.Count == 0 && started)
         {
             Debug.Log("finito");
-            wichSchema.FinJeu();
+            StartCoroutine(wichSchema.GetComponent<WichSchema>().FinJeu());
         }
     }
 
