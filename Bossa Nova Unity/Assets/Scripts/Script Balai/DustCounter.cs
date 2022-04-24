@@ -5,8 +5,12 @@ using UnityEngine;
 public class DustCounter : MonoBehaviour
 {
     public List<GameObject> Dusts;
+    public GameObject bienOuej;
     public static DustCounter instance;
+    public GameObject modele;
     [SerializeField] private GameManager manager;
+    [HideInInspector]
+    public bool started=false;
 
     private void Awake()
     {
@@ -16,13 +20,10 @@ public class DustCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Dusts.Count==0)
+        if (Dusts.Count==0 && started)
         {
             Debug.Log("finito");
-            manager.jeuBalaisFini = true;
-            
-
-
+            modele.GetComponent<WichSchema>().StartCoroutine(FinJeu());
         }
     }
 

@@ -24,6 +24,7 @@ public class WichSchema : MonoBehaviour
     public Schema schemaFinal;
 
     public Schema schemaPrésentation;
+    public GameObject jeuBalai;
 
     private bool jeuLance;
     private bool premierJeuLance = true;
@@ -141,6 +142,7 @@ public class WichSchema : MonoBehaviour
        yield return new WaitForSeconds(2);
        schemaFinal.gameObject.SetActive(false);
        schemaFinal.tableauFini = false;
+        jeuBalai.SetActive(false);
        fenetre.fenetreAnim.SetTrigger("Close");
        yield return new WaitForSeconds(1.8f);
        fenetre.fenetreObject.gameObject.SetActive(false);
