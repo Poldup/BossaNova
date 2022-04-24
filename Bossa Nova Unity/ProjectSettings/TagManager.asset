@@ -7,6 +7,7 @@ TagManager:
   - Bouton
   - balai
   - pelle
+  - poussiere
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: J2 P1
   m_EditorClassIdentifier: 
   phrase:
-  - "Voil\xE0 un test pour le J2"
-  - 'Et un autre test du simple changement de dialogue '
+  - "Piooooouf, quelle journ\xE9e !"
+  - "C'est \xE0 se demander si ils veulent pas nous avoir \xE0 l'usure."
+  - "Bon, je vais me vider la t\xEAte en attendant."
   dialogueFini: 1

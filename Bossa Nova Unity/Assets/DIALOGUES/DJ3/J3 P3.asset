@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92fdf83f3e1cbe94bad7db319dc072af, type: 3}
-  m_Name: J2 P3
+  m_Name: J3 P3
   m_EditorClassIdentifier: 
   phrase:
-  - ENFIN !
-  - "Comment je vais bien dormir apr\xE9s tout \xE7a."
-  - Je me sens seule un petit peu.
-  - Qu'est ce qui se passe quand on reste trop longtemps seul ?
+  - J'ai ce sentiment que j'aurais pu mieux faire.
+  - "Bon en m\xEAme temps, je l'ai en permanence. "
+  - 'Est-ce que j''ai fait de mon mieux ? '
+  - "j'arrive m\xEAme pas \xE0 dire."
+  - "L'important, c'est que cette journ\xE9e soit fini."
   dialogueFini: 0

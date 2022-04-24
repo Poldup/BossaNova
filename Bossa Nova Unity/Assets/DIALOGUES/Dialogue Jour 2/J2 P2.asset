@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: J2 P2
   m_EditorClassIdentifier: 
   phrase:
-  - Bla bla bla
-  dialogueFini: 0
+  - "Je suis pas certaine que \xE7a ai fonctionn\xE9."
+  - "Et j'ai encore \xE7a \xE0 faire pffffff, c'est troooop."
+  dialogueFini: 1

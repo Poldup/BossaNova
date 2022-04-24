@@ -8085,6 +8085,7 @@ MonoBehaviour:
   listeDialogue:
   - {fileID: 11400000, guid: 3e3ea56b5cffe304db63613eecf36a19, type: 2}
   - {fileID: 11400000, guid: 8548f9a6e86e2584b97fdf2bcc75932d, type: 2}
+  - {fileID: 11400000, guid: 9a657c73bf03426418f4cb9f8026d304, type: 2}
 --- !u!4 &882125768
 Transform:
   m_ObjectHideFlags: 0
@@ -11836,6 +11837,7 @@ MonoBehaviour:
   listeDialogue:
   - {fileID: 11400000, guid: 37427e164fbfab048b5c4a8b230a2fe1, type: 2}
   - {fileID: 11400000, guid: 16b5492b1473c0f47ac477834289da09, type: 2}
+  - {fileID: 11400000, guid: 9bb4857e563c0c447aa274ca6636c5cc, type: 2}
 --- !u!4 &1206475075
 Transform:
   m_ObjectHideFlags: 0
@@ -15666,7 +15668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prochainJour: 0
-  quelJour: 0
+  quelJour: 2
   listes: {fileID: 336428943}
   gameManager: {fileID: 0}
 --- !u!114 &1711492576
@@ -16919,7 +16921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &1862963346
 CanvasGroup:
   m_ObjectHideFlags: 0

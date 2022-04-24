@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         //AffichageDialogue();
-        PremierLancement();
+       // PremierLancement();
     }
     
     

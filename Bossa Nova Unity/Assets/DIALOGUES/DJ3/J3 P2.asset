@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: J3 P2
   m_EditorClassIdentifier: 
   phrase:
-  - SECOND JOUR 3
-  - DERNIER JOUR 3
+  - C'est comme si j'avais pris la meeeer,
+  - j'ai sortis la grande vooooile,
+  - "et j'ai gliss\xE9 sous le veeeent."
+  - "Merci Celine. Heuresement que tu es l\xE0"
+  - "Courage, j'ai pas non plus fini ma journ\xE9e"
   dialogueFini: 0

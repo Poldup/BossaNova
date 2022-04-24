@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: JOUR 1 P2
   m_EditorClassIdentifier: 
   phrase:
-  - "Bon\u2026 Va falloir que je m\u2019y mette\u2026"
+  - "Bon\u2026 Va falloir que je m\u2019y mette."
   - "J\u2019ai la flemme de tout."
   - "J\u2019ai la flemme pour tout."
-  - Mais va falloir que je fasse tout....
-  - Bon ! Si je revivais un peu avant de commencer...
+  - Mais va falloir que je fasse tout.
+  - Bon ! Si je revisais un peu avant de commencer.
   dialogueFini: 1

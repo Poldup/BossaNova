@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phrase:
   - "Bon c'\xE9tait plus rapide que pr\xE9vu !"
-  - "Je vais passer un coup de balais parce qu'apr\xE8s tout \xE7a..."
-  - "O\xF9 est mon ramasse poussiere... ?"
-  dialogueFini: 0
+  - "Je vais passer un coup de balais, \xE7a fait longtemps que je l'ai pas fait."
+  - "O\xF9 est mon ramasse poussiere du coup ?"
+  dialogueFini: 1

@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             gestionDialogue.AffichageDialogue();
         }
 
-        if (jeuBalaisFini && jeuRevisionFini && systemeJour.quelJour == 3)
+        if (jeuBalaisFini && jeuRevisionFini && systemeJour.quelJour == 2)
         {
             Debug.Log("Derneir Ecran");
             EcranFinal();

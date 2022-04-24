@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: J3 P1
   m_EditorClassIdentifier: 
   phrase:
-  - 'JOUR J3 JOUR 3 JOUR 3 '
+  - "BON ! Mon projet me casse la t\xEAte. "
+  - C'est trop, j'en peux plus.
+  - "J'ai beau faire \xE7a du matin au soir, j'ai l'impression de pas avancer"
+  - Et je dois reviser.
+  - Et je dois faire le menage.
+  - Grrrrrrrrrrrr.
   dialogueFini: 0
