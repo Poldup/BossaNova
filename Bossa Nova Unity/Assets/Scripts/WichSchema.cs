@@ -28,7 +28,6 @@ public class WichSchema : MonoBehaviour
     private bool jeuLance;
     private bool premierJeuLance = true;
 
-    [SerializeField] BoiteDialogue dialogueMiniJeu;
     
     
     

@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc88e9813e9776840933b4883648ef9a, type: 3}
-  m_Name: TEST
+  m_Script: {fileID: 11500000, guid: 92fdf83f3e1cbe94bad7db319dc072af, type: 3}
+  m_Name: J3 P1
   m_EditorClassIdentifier: 
-  dialogue:
-  - "ceci est un test ! \n"
-  - 'ceci est un autre test ?
-
-'
-  - ceci est un dernier test mdr
+  phrase:
+  - 'JOUR J3 JOUR 3 JOUR 3 '
+  dialogueFini: 0
