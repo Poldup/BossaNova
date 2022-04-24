@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,9 +11,15 @@ public class MenuManager : MonoBehaviour
 
     public TransitionLevel changementLevel;
 
-    public GameObject startMenu;
+    public GameObject titreMenu;
+    public Button jouer;
+    public Button option;
+    public Button quitter;
 
     private Animator animationMenu;
+    private Animator animationJouer;
+    private Animator animationOption;
+    private Animator animationQuitter;
 
     public SystemeJourSuivant systemeJour;
 
@@ -21,7 +28,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ApparitionMenu();
+       ApparitionMenu();
     }
 
     // Update is called once per frame
@@ -50,7 +57,11 @@ public class MenuManager : MonoBehaviour
 
     private void ApparitionMenu()
     {
-        animationMenu = startMenu.GetComponent<Animator>();
+        animationMenu = titreMenu.GetComponent<Animator>();
+        animationJouer = jouer.GetComponent<Animator>();
+        animationOption = option.GetComponent<Animator>();
+        animationQuitter = quitter.GetComponent<Animator>();
+
         StartCoroutine(MenuPrincipal());
     }
 

@@ -89,8 +89,9 @@ public class WichSchema : MonoBehaviour
                 TableauRinitialiser();
                 StartCoroutine(FinJeu());
                 //ecran victoire a lancer ici
+                
 
-            }
+}
 
             else schemaschoisis[curseurSchema].gameObject.SetActive(true);
         }

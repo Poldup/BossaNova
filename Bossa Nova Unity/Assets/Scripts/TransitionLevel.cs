@@ -43,7 +43,7 @@ public class TransitionLevel : MonoBehaviour
     {
         animatorTransition.SetTrigger("AnimationStart");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("Scene Victor");
+        SceneManager.LoadScene("Scenes/Scène Hub");
     }
     
     
