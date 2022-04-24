@@ -13,6 +13,7 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
     [SerializeField]
     public bool estRelie;
     
+
     public static bool ecranEstFini;
     
         // Start is called before the first frame update
@@ -26,10 +27,6 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
         void Update()
         {
 
-           
-            
-            
-            
         }
  
         public void OnPointerDown(PointerEventData eventData)
@@ -43,10 +40,10 @@ public class POINTS : MonoBehaviour, IPointerDownHandler
                 {
                     estRelie = true;
                 }));
-                
+                nouvelleConnection.SuivreSouris(this);
 
             }
-            
+
             
             
         }

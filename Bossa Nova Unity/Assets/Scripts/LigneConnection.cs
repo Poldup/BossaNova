@@ -22,7 +22,8 @@ public class LigneConnection : MonoBehaviour
     public UnityEvent quandRelie = new UnityEvent();
 
     public Schema schema;
-    
+
+    public POINTS pointActif;
 
     private void OnValidate()
     {
@@ -42,8 +43,8 @@ public class LigneConnection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SuivreSouris();
-        AnnulerLigne();
+       SuivreSouris(prochainPoint);
+        //AnnulerLigne();
         VerifierProchainPoint();
        UneSeuleLigne();
     }
@@ -72,12 +73,19 @@ public class LigneConnection : MonoBehaviour
         nepasSuivre = true;
         enTrainDeFaireUneLigne = true;
         quandRelie.Invoke();
+        
 
     }
-    public void SuivreSouris()
+    public void SuivreSouris(POINTS pointDepart)
     {
         if (nepasSuivre) return;
         connexion.SetPosition(1, (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        if (Input.GetMouseButton(1) && !pointDepart.estRelie)
+        {
+            pointDepart.estRelie = false;
+            Destroy(gameObject);
+
+        }
     }
 
     public void PositionPoints(POINTS premierPoint, POINTS _prochainPoint)
@@ -88,7 +96,7 @@ public class LigneConnection : MonoBehaviour
         enTrainDeFaireUneLigne = true;
     }
 
-    public void AnnulerLigne()
+  /*  public void AnnulerLigne()
     {
         if (!nepasSuivre && Input.GetMouseButton(1))
         {
@@ -96,7 +104,7 @@ public class LigneConnection : MonoBehaviour
             Destroy(gameObject);
         }
         
-    }
+    }*/
 
     public void UneSeuleLigne()
     {
@@ -105,11 +113,11 @@ public class LigneConnection : MonoBehaviour
            // nepasSuivre = false;
            // enTrainDeFaireUneLigne = false;
            Destroy(gameObject);
-            
+           
 
         }
         
         
     }
-   
+    
 }

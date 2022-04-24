@@ -26,14 +26,15 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        AffichageDialogue();
-
+        //AffichageDialogue();
+        PremierLancement();
     }
     
     
     IEnumerator EffetTexte()
     {
         //dialogueActuel = listeDialogues.dialogueSelectionne;
+        
         foreach (char lettre in dialogueActuel.DialoguesObjet[index].ToCharArray())
         {
             texteDialogue.text += lettre;
@@ -66,7 +67,6 @@ public class DialogueManager : MonoBehaviour
             boiteDialogue.SetActive(false);
             index = 0;
             Destroy(dialogueActuel);
-
         }
 
     }
@@ -74,13 +74,26 @@ public class DialogueManager : MonoBehaviour
 
     public void AffichageDialogue()
     {
-        listeDialogues.ChoixDialogue();
+        listeDialogues.numeroDialogue++;
+        listeDialogues.JeSaisPlusCommentAppeler();
         dialogueActuel = listeDialogues.dialogueSelectionne;
         Debug.Log(listeDialogues.dialogueSelectionne);
         boiteDialogue.SetActive(true);
         StartCoroutine(EffetTexte());
         Debug.Log(index);
 
+    }
+
+
+
+    public void PremierLancement()
+    {
+        listeDialogues.JeSaisPlusCommentAppeler();
+        dialogueActuel = listeDialogues.dialogueSelectionne;
+        Debug.Log(listeDialogues.dialogueSelectionne);
+        boiteDialogue.SetActive(true);
+        StartCoroutine(EffetTexte());
+        Debug.Log(index);
     }
 
 }
