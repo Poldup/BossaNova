@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ecran titre.unity
     guid: c16fcaa2a4d694843abb8517926fea18
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Victor.unity
     guid: 01073212188188247adca02f1fd3b5c5
+  - enabled: 1
+    path: Assets/Scenes/SceneFinal.unity
+    guid: 473fc9e95f2f7294b90e9a0fb71b263d
+  - enabled: 1
+    path: "Assets/Scenes/Sc\xE8ne Hub.unity"
+    guid: dfd12d9db67d2c9468522c3ee2797911
+  - enabled: 1
+    path: Assets/Scenes/LastScene.unity
+    guid: 20ec70b046f29ed4caedd30cf98c4689
   m_configObjects: {}

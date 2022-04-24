@@ -26,6 +26,7 @@ public class DustCounter : MonoBehaviour
         {
             Debug.Log("finito");
             StartCoroutine(wichSchema.GetComponent<WichSchema>().FinJeu());
+            manager.jeuBalaisFini = true;
         }
     }
 
