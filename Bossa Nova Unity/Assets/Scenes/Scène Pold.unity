@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSpeed: 0.4
+  rotateSpeed: 100
 --- !u!50 &250952980
 Rigidbody2D:
   serializedVersion: 4
@@ -653,7 +654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1204738252
 Transform:
   m_ObjectHideFlags: 0
