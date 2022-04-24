@@ -52,4 +52,12 @@ public class DeplacementSouris : MonoBehaviour
             transform.GetChild(0).transform.Rotate(0, 0, -wheel, Space.Self);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag=="poussiere")
+        {
+            collision.gameObject.GetComponent<DustMovement>().movement = movement;
+        }
+    }
 }

@@ -5,6 +5,7 @@ using Unity.Mathematics;
 
 public class MiniJeuStart : MonoBehaviour
 {
+    public GameObject instructions;
     public GameObject dustPrefab;
     public GameObject Dusts;
     public int dustNumber;
@@ -29,7 +30,18 @@ public class MiniJeuStart : MonoBehaviour
 
     void Start()
     {
-        yNb = (int) Mathf.Sqrt(dustNumber);
+        BalaiStart();
+    }
+
+    
+    
+    IEnumerator BalaiStart()
+    {
+        Debug.Log("test");
+        instructions.SetActive(true);
+        yield return new WaitForSeconds(2);
+        instructions.SetActive(false);
+        yNb = (int)Mathf.Sqrt(dustNumber);
         xNb = dustNumber / yNb;
         if (dustNumber % yNb != 0)
         {
@@ -38,7 +50,7 @@ public class MiniJeuStart : MonoBehaviour
         divX = border.bounds.size.x / xNb;
         divY = border.bounds.size.y / yNb;
         divX2 = border.bounds.size.x / xNb2;
-        for (int i=1; i<=dustNumber; i++)
+        for (int i = 1; i <= dustNumber; i++)
         {
             Vector4 section = coord(xNb, yNb, xNb2, border, i);
             float dustX;
@@ -55,27 +67,8 @@ public class MiniJeuStart : MonoBehaviour
                 //Debug.Log("dust placé");
                 DustCounter.instance.Dusts.Add(dust);
             }
-
-
-
-
-
-            /*do
-            {
-                dustX = UnityEngine.Random.Range(section.x, section.z);
-                dustY = UnityEngine.Random.Range(section.y, section.w);
-                dustPos = new Vector3(dustX, dustY, 0);
-                Debug.Log("dust pos =" + dustPos);
-                secu += 1;
-            } while (!wellplaced(dustPos, pelle, border));
-            if (secu <= 10)
-            {
-                GameObject dust = Instantiate(dustPrefab, dustPos, dustPrefab.transform.rotation, Dusts.transform);
-                Debug.Log("dust placé");
-            }*/
         }
     }
-
     static bool wellplaced(Vector3 point, Collider2D pelle, Collider2D border)
     {
         Vector3 center;

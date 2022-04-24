@@ -8,6 +8,7 @@ TagManager:
   - balai
   - pelle
   - poussiere
+  - poussiere2
   layers:
   - Default
   - TransparentFX

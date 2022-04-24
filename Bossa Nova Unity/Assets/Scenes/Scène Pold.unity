@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.87660277, y: 1.7697375}
+  m_AnchoredPosition: {x: 1.06, y: 1.7697375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &260049230
@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 1034949921}
   - component: {fileID: 1034949922}
   - component: {fileID: 1034949923}
+  - component: {fileID: 1034949924}
   m_Layer: 3
   m_Name: Pelle
   m_TagString: pelle
@@ -580,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dusts: []
+  manager: {fileID: 0}
 --- !u!60 &1034949923
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -619,6 +621,18 @@ PolygonCollider2D:
       - {x: 0.5453994, y: -0.08343236}
       - {x: 0.6460888, y: 0.107421964}
       - {x: 0.75501204, y: 0.83690274}
+--- !u!114 &1034949924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034949918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01125767fad027f4c955488c404bc7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1159836025
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1204738252
 Transform:
   m_ObjectHideFlags: 0
@@ -1389,7 +1403,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.06
   m_Points:
   - {x: -4.064732, y: 3.9380016}
   - {x: 5.1695204, y: 3.9232078}
