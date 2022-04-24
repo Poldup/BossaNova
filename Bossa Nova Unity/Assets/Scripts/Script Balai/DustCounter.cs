@@ -5,7 +5,9 @@ using UnityEngine;
 public class DustCounter : MonoBehaviour
 {
     public List<GameObject> Dusts;
+    public GameObject bienOuej;
     public static DustCounter instance;
+    public GameObject modele;
     [SerializeField] private GameManager manager;
     [HideInInspector]
     public bool started=false;
@@ -21,7 +23,7 @@ public class DustCounter : MonoBehaviour
         if (Dusts.Count==0 && started)
         {
             Debug.Log("finito");
-            manager.jeuBalaisFini = true;
+            modele.GetComponent<WichSchema>().StartCoroutine(FinJeu());
         }
     }
 
