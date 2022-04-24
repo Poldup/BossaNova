@@ -14,7 +14,6 @@ public class DeplacementSouris : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()
