@@ -142,6 +142,7 @@ public class WichSchema : MonoBehaviour
        Debug.Log("fin jeu");
        schemaFinal.gameObject.SetActive(true);
        curseurSchema = 0;
+        Cursor.lockState = CursorLockMode.None;
        yield return new WaitForSeconds(2);
        schemaFinal.gameObject.SetActive(false);
        schemaFinal.tableauFini = false;
