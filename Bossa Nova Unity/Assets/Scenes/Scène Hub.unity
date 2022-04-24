@@ -12211,6 +12211,7 @@ MonoBehaviour:
   fenetre: {fileID: 634513534}
   schemaFinal: {fileID: 1209865914}
   "schemaPr\xE9sentation": {fileID: 1821248152}
+  jeuBalai: {fileID: 946835231}
   dialogue: {fileID: 336428944}
   manager: {fileID: 1711492576}
 --- !u!1001 &1136988921
@@ -16420,7 +16421,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dusts: []
+  bienOuej: {fileID: 0}
+  modele: {fileID: 0}
   manager: {fileID: 1711492576}
+  started: 0
+  wichSchema: {fileID: 0}
 --- !u!50 &1559614189
 Rigidbody2D:
   serializedVersion: 4
